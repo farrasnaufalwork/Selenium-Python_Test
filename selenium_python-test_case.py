@@ -19,7 +19,7 @@ class Test_One_Login(unittest.TestCase):
         browser.find_element(By.XPATH,"/html//input[@name='password']").send_keys("admin123") # isi password
         time.sleep(1)
         browser.find_element(By.XPATH,"//button[@type='submit']").click() # klik tombol log in
-        time.sleep(1)
+        time.sleep(5)
 
         # validasi
         assert "/web/index.php/dashboard/index" in browser.current_url
@@ -34,7 +34,7 @@ class Test_One_Login(unittest.TestCase):
         browser.find_element(By.XPATH,"/html//input[@name='password']").send_keys("admin123") # isi password
         time.sleep(1)
         browser.find_element(By.XPATH,"//button[@type='submit']").click() # klik tombol log in
-        time.sleep(1)
+        time.sleep(5)
 
         # validasi
         response_message = browser.find_element(By.XPATH,"//div[@id='app']/div/div/div/div/div[2]/div[2]/div/div/div/p").text
@@ -51,7 +51,7 @@ class Test_One_Login(unittest.TestCase):
         browser.find_element(By.XPATH,"/html//input[@name='password']").send_keys("tugasday13") # isi password yang tak valid
         time.sleep(1)
         browser.find_element(By.XPATH,"//button[@type='submit']").click() # klik tombol log in
-        time.sleep(1)
+        time.sleep(5)
 
         # validasi
         response_message = browser.find_element(By.XPATH,"//div[@id='app']/div/div/div/div/div[2]/div[2]/div/div/div/p").text
@@ -68,7 +68,7 @@ class Test_One_Login(unittest.TestCase):
         browser.find_element(By.XPATH,"/html//input[@name='password']").send_keys("admin123") # isi password
         time.sleep(1)
         browser.find_element(By.XPATH,"//button[@type='submit']").click() # klik tombol log in
-        time.sleep(1)
+        time.sleep(5)
 
         # validasi
         response_message = browser.find_element(By.XPATH,"//div[@id='app']/div/div/div/div/div[2]/div[2]/form/div/div/span").text
